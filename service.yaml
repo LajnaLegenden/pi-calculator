@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service                  #line2 
+metadata:
+  name: nextjs-kube-service    #line4
+spec:
+  selector:
+    app: nextjsweb                   #line7
+  ports:
+  - port: 3000                 #line8
+    targetPort: 3000           #line9
+  type: NodePort               #line10
